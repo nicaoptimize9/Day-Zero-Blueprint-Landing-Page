@@ -6,15 +6,17 @@
 <title>Day Zero Blueprint™ | Stop Leading Alone | Optimize Healthcare</title>
 <meta name="description" content="The Day Zero Blueprint™ helps healthcare leaders decrease turnover, engage teams, and drive operational and financial results. Book your free strategy call.">
 <link rel="icon" type="image/png" href="assets/dzb-logo.png">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Kaushan+Script&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#0A2E5A; --blue:#1D6295; --blue2:#1F689E; --teal:#3AB1C3;
-  --teal2:#3DBBCD; --cyan:#04ECF4; --mist:#E9F0F8; --white:#FFFFFF;
+  --teal2:#3DBBCD; --cyan:#04ECF4; --mist:#E9F0F8; --white:#FFFFFF; --gold:#C9A24B;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{font-family:'Poppins',sans-serif;color:var(--navy);font-size:18px;line-height:1.6;background:var(--white)}
 .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
 .script{font-family:'Kaushan Script',cursive} /* Production: replace with licensed Playlist Script */
@@ -28,9 +30,10 @@ h2::after{content:"";display:block;width:64px;height:4px;background:var(--teal);
   text-transform:uppercase;letter-spacing:1px;padding:18px 40px;border-radius:8px;text-decoration:none;
   box-shadow:0 6px 18px rgba(10,46,90,.25);transition:.2s;position:relative;overflow:hidden}
 .btn:hover{background:var(--teal2);transform:translateY(-2px)}
-.btn.alt{background:var(--navy)}
-.btn.alt:hover{background:#123c6e}
+.btn.alt{background:var(--gold)}
+.btn.alt:hover{background:#D8B15B}
 .btnrow{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btnrow .btn{min-width:300px;text-align:center;font-size:16px;padding:18px 26px}
 .closing .btnrow{justify-content:center}
 .btn::after{content:"";position:absolute;top:0;left:-80%;width:45%;height:100%;
   background:linear-gradient(115deg,transparent,rgba(255,255,255,.65),transparent);
@@ -39,31 +42,38 @@ h2::after{content:"";display:block;width:64px;height:4px;background:var(--teal);
 .micro{font-size:14px;opacity:.75;margin-top:12px}
 section{padding:80px 0}
 .divider{display:block;margin:0 auto;max-width:420px;width:80%;padding:8px 0}
-.dots{position:absolute;width:330px;height:130px;pointer-events:none;opacity:.55;z-index:0;
+.dots{position:absolute;pointer-events:none;opacity:.55;z-index:0;
   background-image:radial-gradient(circle,var(--teal2) 6px,transparent 7px),radial-gradient(circle,var(--blue) 6px,transparent 7px);
   background-size:42px 84px,42px 84px;background-position:0 0,21px 42px}
 .hasdots{position:relative;overflow:hidden}
 .hasdots>.wrap{position:relative;z-index:1}
-.dots.tr{top:36px;right:-60px}
-.dots.bl{bottom:36px;left:-60px}
+.dots{width:260px;height:104px}
+.dots.tr{top:34px;right:28px}
+.dots.bl{bottom:34px;left:28px}
 @media(max-width:900px){.dots{display:none}}
 /* NAV */
 nav{position:sticky;top:0;z-index:99;background:var(--white);box-shadow:0 2px 12px rgba(10,46,90,.08)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:10px;padding-bottom:10px}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:10px;padding-bottom:10px}
 nav img{height:52px}
-nav .btn{padding:12px 24px;font-size:14px}
+nav .btn{padding:12px 24px;font-size:14px;cursor:pointer;border:none;font-family:'Poppins',sans-serif}
+.navlinks{display:flex;gap:28px;align-items:center}
+.navlinks a{color:var(--navy);font-weight:500;font-size:15px;text-decoration:none;position:relative;padding:4px 0}
+.navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2.5px;background:var(--teal);transition:right .25s ease}
+.navlinks a:hover::after{right:0}
+.navlinks a:hover{color:var(--blue)}
+@media(max-width:1020px){.navlinks{display:none}}
 /* HERO — light style mimicking dayzeroblueprint.com/register-now */
-.hero{color:var(--navy);padding:70px 0 0;
+.hero{color:var(--navy);padding:54px 0 0;
   background:linear-gradient(90deg,#FFFFFF 0%,#FFFFFF 44%,rgba(255,255,255,.88) 58%,rgba(233,240,248,.35) 78%,rgba(233,240,248,.12) 100%),
-  url('assets/Medical%20Team%20Photo.png') right center/max(58%,640px) auto no-repeat,
+  url('assets/Medical%20Team%20Photo.png') right bottom/max(56%,620px) auto no-repeat,
   linear-gradient(135deg,#FFFFFF 0%,var(--mist) 100%)}
 .hero .wrap{display:block;max-width:1140px}
-.hero .content{max-width:600px}
+.hero .content{max-width:600px;padding-bottom:70px}
 .hero .logorow2{display:flex;align-items:center;gap:28px;margin-bottom:30px}
 .hero .herologo{height:150px}
 .hero .ohlogo{height:78px;opacity:.95}
 .hero h1{font-size:30px;font-weight:400;color:#33507a;margin:0 0 26px;line-height:1.35}
-.hero h1 b{display:block;font-weight:700;color:var(--navy);font-size:34px;margin-top:6px}
+.hero h1 b{display:block;font-weight:800;color:var(--navy);font-size:44px;margin-top:0;line-height:1.15}
 .hero .hl{color:var(--blue);font-weight:700}
 .createdby{display:flex;align-items:center;gap:16px;margin-top:34px}
 .createdby .round{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:top;
@@ -79,9 +89,9 @@ nav .btn{padding:12px 24px;font-size:14px}
 .photocard .capbar{background:var(--navy);color:var(--white);padding:16px 22px}
 .photocard .capbar b{display:block;font-size:16px;letter-spacing:1px;color:var(--white)}
 .photocard .capbar span{font-size:12.5px;color:var(--mist);line-height:1.5;display:block}
-.hero .strip{background:var(--mist);margin-top:64px;padding:26px 0;text-align:center;
+.strip{background:var(--mist);padding:26px 0;text-align:center;
   color:var(--blue);letter-spacing:8px;font-weight:700;font-size:26px}
-.hero .strip .arw{color:var(--teal);letter-spacing:0;padding:0 10px}
+.strip .arw{color:var(--teal);letter-spacing:0;padding:0 10px}
 /* TRUST */
 .trust{background:var(--white);padding:36px 0;border-bottom:1px solid var(--mist)}
 .trust .eyebrow{color:var(--blue);text-align:center;display:block;margin-bottom:18px}
@@ -158,6 +168,14 @@ nav .btn{padding:12px 24px;font-size:14px}
 .path ol{margin:16px 0 16px 20px}
 .path ol li{margin-bottom:10px}
 .path .fine{border-top:1px solid var(--mist);margin-top:18px;padding-top:14px;font-size:14px;color:var(--blue)}
+.pricebox{border-top:1px solid var(--mist);margin-top:18px;padding-top:16px;font-size:16px;color:var(--navy)}
+.pricebox b{color:var(--blue)}
+.pricebox span{font-size:13.5px;color:#33507a;display:block;margin-top:6px}
+.roiband{background:var(--navy);border-radius:12px;padding:34px 40px;margin-top:36px;color:var(--white);
+  display:flex;gap:28px;align-items:center;flex-wrap:wrap;border-left:6px solid var(--teal)}
+.roiband .big{font-size:40px;font-weight:800;color:var(--cyan);flex-shrink:0}
+.roiband p{font-size:16px;color:var(--mist);flex:1;min-width:260px}
+.roiband b{color:var(--white)}
 .paths .cta{text-align:center;margin-top:48px}
 .paths .cta p{font-weight:600;margin-bottom:18px}
 /* CASES */
@@ -228,7 +246,7 @@ footer p,footer a{font-size:14px;color:var(--blue);text-decoration:none}
   .hero .herologo{height:92px}
   .hero .ohlogo{height:52px}
   .hero{background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(233,240,248,.9)),url('assets/Medical%20Team%20Photo.png') center top/cover no-repeat,var(--mist)}
-  .hero .strip{font-size:15px;letter-spacing:5px}
+  .strip{font-size:15px;letter-spacing:5px}
   .hero .wrap,.guide .wrap,.inside,.value .wrap{grid-template-columns:1fr}
   .grid3,.phases{grid-template-columns:1fr}
   .caro{padding:0 8px}
@@ -249,7 +267,14 @@ footer p,footer a{font-size:14px;color:var(--blue);text-decoration:none}
 <nav>
   <div class="wrap">
     <img src="assets/dzb-logo.png" alt="Day Zero Blueprint">
-    <a class="btn" href="https://calendly.com/dayzerostrategy/day-zero-blueprint-strategy-call?utm_content=nav">Book a Strategy Call</a>
+    <div class="navlinks">
+      <a href="#problem">The Problem</a>
+      <a href="#blueprint">The Blueprint</a>
+      <a href="#paths">Paths &amp; Pricing</a>
+      <a href="#results">Results</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <button class="btn" onclick="Calendly.initPopupWidget({url:'https://calendly.com/dayzerostrategy/day-zero-blueprint-strategy-call?utm_content=navbar'});return false;">Book a Strategy Call</button>
   </div>
 </nav>
 
@@ -261,8 +286,9 @@ footer p,footer a{font-size:14px;color:var(--blue);text-decoration:none}
         <img class="herologo" src="assets/dzb-logo.png" alt="Day Zero Blueprint">
         <img class="ohlogo" src="assets/oh-logo.png" alt="Optimize Healthcare">
       </div>
-      <h1>Coaching and consulting program to help healthcare leaders and physician practice owners
-        <b>build a top-tier organization that attracts &amp; retains high-performers so they can optimize results</b></h1>
+      <p class="eyebrow" style="color:var(--teal);margin-bottom:10px">For Healthcare Leaders &amp; Physician Practice Owners</p>
+      <h1><b>Stop leading alone. Build a team that leads with you.</b></h1>
+      <p class="sub" style="font-size:19px;color:#33507a;margin:0 0 28px;max-width:540px">The Day Zero Blueprint&trade; is the step-by-step system to reset, reimagine, and relaunch your organization &mdash; so you can reduce turnover, engage your team, and optimize results.</p>
       <div class="btnrow">
         <a class="btn" href="https://calendly.com/dayzerostrategy/day-zero-blueprint-strategy-call?utm_content=hero">Book My Free Strategy Call</a>
         <a class="btn alt" href="https://optimizehealthcare.xperiencify.io/day-zero-blueprint/order/?utm_content=hero">Get Access Now</a>
@@ -276,11 +302,10 @@ footer p,footer a{font-size:14px;color:var(--blue);text-decoration:none}
       </div>
     </div>
   </div>
-  <div class="strip">RESET<span class="arw">&#10142;</span>REIMAGINE<span class="arw">&#10142;</span>RELAUNCH</div>
 </header>
 
 <!-- SECTION 2: TRUST BAR -->
-<div class="trust">
+<div class="trust" style="border-bottom:none;padding:42px 0 30px">
   <div class="wrap">
     <span class="eyebrow">Adrienne Has Been Featured By</span>
     <div class="badges">
@@ -294,8 +319,10 @@ footer p,footer a{font-size:14px;color:var(--blue);text-decoration:none}
   </div>
 </div>
 
+<div class="strip">RESET<span class="arw">&#10142;</span>REIMAGINE<span class="arw">&#10142;</span>RELAUNCH</div>
+
 <!-- SECTION 3: PROBLEM -->
-<section class="problem">
+<section class="problem" id="problem">
   <div class="wrap">
     <h2>Does This Sound Like You?</h2>
     <p class="lead">On the outside, you're at the top of your game. On the inside…</p>
@@ -358,7 +385,7 @@ footer p,footer a{font-size:14px;color:var(--blue);text-decoration:none}
 </section>
 
 <!-- SECTION 6: SOLUTION -->
-<section class="solution hasdots"><div class="dots tr"></div><div class="dots bl"></div>
+<section class="solution hasdots" id="blueprint"><div class="dots tr"></div><div class="dots bl"></div>
   <div class="wrap">
     <img class="logo" src="assets/dzb-logo.png" alt="Day Zero Blueprint">
     <h2>A Proven System to Reset, Reimagine, and Relaunch Your Organization</h2>
@@ -398,22 +425,22 @@ footer p,footer a{font-size:14px;color:var(--blue);text-decoration:none}
 </section>
 
 <!-- SECTION 7: PATHS -->
-<section class="paths">
+<section class="paths" id="paths">
   <div class="wrap">
     <h2>Choose the Path That Fits You Best</h2>
     <div class="pathgrid">
       <div class="path">
         <span class="pill">PATH A · INDIVIDUAL</span>
         <h3>The Individual Path</h3>
-        <p class="for">For independent practice administrators, single-site leaders, and small leadership teams (2–5 people)</p>
-        <p>Move through the Day Zero Blueprint™ in the company of peers — within your own organization or alongside leaders facing similar challenges in your specialty. Same eight modules, same weekly live coaching, same accountability structure.</p>
+        <p class="for">For independent specialty practice leaders and administrators — ophthalmology, surgical, and specialty groups</p>
+        <p>You don't have to figure this out alone. Join a small cohort of practice leaders from other independent groups — no corporate layers, no vendor pitch — working through the same operational and leadership pressures you deal with every week, together.</p>
         <ol>
-          <li><b>Join a scheduled cohort</b> alongside participants from other independent practices</li>
-          <li><b>Apply the tools to your practice</b> through rapid-action assignments between sessions</li>
-          <li><b>Learn with peers across specialties</b> while building a customized Day Zero action plan</li>
+          <li><b>Join a scheduled peer cohort</b> alongside administrators from other independent practices</li>
+          <li><b>Apply every tool directly to your practice</b> through rapid-action assignments between sessions</li>
+          <li><b>Build your own Day Zero action plan</b> with coaching from Adrienne and peers who actually get it</li>
         </ol>
-        <p>Built for leaders who don't need — or aren't ready for — a full organizational rollout, but still want the structure, the coaching, and the community to make real change stick.</p>
-        <p class="fine">No minimum enrollment — individuals and small teams welcome · Mixed-organization cohort format</p>
+        <p class="pricebox"><b>Investment:</b> starts at $25K for up to 5 members of your leadership team.<br>
+        <span>Per-person discounts when you bring colleagues &middot; Early-enrollment savings available &mdash; ask on your call</span></p>
       </div>
       <div class="path">
         <span class="pill">PATH B · ORGANIZATION</span>
@@ -425,8 +452,13 @@ footer p,footer a{font-size:14px;color:var(--blue);text-decoration:none}
           <li><b>Practice-level implementation</b> — the framework cascades to managers, supervisors, and site leaders</li>
           <li><b>Sustainability + adoption</b> — internal teams carry the shared language and Day Zero conversations forward</li>
         </ol>
-        <p class="fine">Customized cohort structure &amp; timeline · Guided onboarding, progress tracking, weekly prep emails, and private group sessions for larger teams</p>
+        <p class="pricebox"><b>Investment:</b> custom-scoped to your organization &mdash; built around your size, sites, and goals.<br>
+        <span>Customized cohort structure &amp; timeline &middot; Guided onboarding, progress tracking, and private group sessions</span></p>
       </div>
+    </div>
+    <div class="roiband">
+      <span class="big">20X+ ROI</span>
+      <p><b>Whichever path you choose, the blueprint is the same.</b> The same eight modules, live coaching, and tools behind alumni results like <b>20X+ return on investment within the first 12 months</b> — including over $500K in margin improvements, hours back every week, and teams that finally lead with you.</p>
     </div>
     <div class="cta">
       <p>Not sure which path fits? That's exactly what the strategy call is for.</p>
@@ -436,7 +468,7 @@ footer p,footer a{font-size:14px;color:var(--blue);text-decoration:none}
 </section>
 
 <!-- SECTION 8: CASE STUDIES -->
-<section class="hasdots"><div class="dots tr"></div>
+<section class="hasdots" id="results"><div class="dots tr"></div>
   <div class="wrap">
     <h2>The Results Speak for Themselves</h2>
     <div class="casegrid">
@@ -493,15 +525,41 @@ footer p,footer a{font-size:14px;color:var(--blue);text-decoration:none}
         <li>Private online Day Zero community</li>
         <li>Bonuses: Kickoff Strategy Session, John Maxwell DISC Assessment &amp; Team Training, Optimize Your Space Workshop</li>
       </ul>
-      <p class="vtotal">Total value: <b>$140,000+</b></p>
-      <p><b>Your investment? A fraction of this</b> — and some participants have seen a 10X+ return in the first months. We'll scope the exact fit for your team on your free strategy call.</p>
+      <p style="margin-top:14px"><b>Everything above is included — one program, one team, one relaunch.</b> Some participants have seen a 10X+ return within the first months. We'll scope the exact fit and investment for your team on your free strategy call.</p>
       <a class="btn" href="https://calendly.com/dayzerostrategy/day-zero-blueprint-strategy-call?utm_content=value">Book a Strategy Call</a>
     </div>
   </div>
 </section>
 
+<!-- FIT FILTER -->
+<section style="padding:64px 0">
+  <div class="wrap">
+    <h2>This Program Is <span style="color:var(--teal)">For You</span> If&hellip;</h2>
+    <div class="pathgrid" style="margin-top:36px">
+      <div class="path" style="border-top:5px solid var(--teal)">
+        <h3 style="font-size:20px">It's for you if you&hellip;</h3>
+        <ul class="ilist" style="margin-top:16px">
+          <li>Are fed up with losing high-performing staff and providers</li>
+          <li>Want to stop merely putting out fires and focus on patients and growth</li>
+          <li>Are willing to drive significant change — but want a proven place to start</li>
+          <li>Believe your team can solve problems with you, so you can actually unplug</li>
+        </ul>
+      </div>
+      <div class="path" style="border-top:5px solid var(--blue)">
+        <h3 style="font-size:20px">It's not for you if you&hellip;</h3>
+        <ul class="ilist" style="margin-top:16px">
+          <li>Aren't ready to share the wheel with your team</li>
+          <li>Already have seamless flow, standardized processes, and full engagement</li>
+          <li>Don't believe there's real opportunity to reduce expenses while improving morale</li>
+          <li>Can't commit the time and energy to lead the change</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SECTION 11: FAQ (all 9 items from dayzeroblueprint.com/register-now) -->
-<section class="faq">
+<section class="faq" id="faq">
   <div class="wrap" style="max-width:860px">
     <h2>Frequently Asked Questions</h2>
     <div style="margin-top:36px">
@@ -525,8 +583,8 @@ footer p,footer a{font-size:14px;color:var(--blue);text-decoration:none}
     <h2>Your Organization Doesn't Need Another Temporary Fix.</h2>
     <p>You need a clear path, an aligned team, and a system for creating sustainable results. The Day Zero Blueprint™ is designed to help you reset, reimagine, and relaunch — with clarity, accountability, and momentum. Let's review your goals and determine the best path forward.</p>
     <div class="btnrow">
-      <a class="btn" style="font-size:19px;padding:20px 44px" href="https://calendly.com/dayzerostrategy/day-zero-blueprint-strategy-call?utm_content=closing">Book Your Free Strategy Call</a>
-      <a class="btn alt" style="font-size:19px;padding:20px 44px" href="https://optimizehealthcare.xperiencify.io/day-zero-blueprint/order/?utm_content=closing">Get Access Now</a>
+      <a class="btn" href="https://calendly.com/dayzerostrategy/day-zero-blueprint-strategy-call?utm_content=closing">Book Your Free Strategy Call</a>
+      <a class="btn alt" href="https://optimizehealthcare.xperiencify.io/day-zero-blueprint/order/?utm_content=closing">Get Access Now</a>
     </div>
     <p class="micro">30 minutes. No obligation. Walk away with clarity either way.</p>
     <p class="sigline"><b>Adrienne Palmer Lloyd, MHA, FACHE</b>CEO, Optimize Healthcare · MGMA Consultant · Creator, Day Zero Blueprint™ · Certified John Maxwell Leadership Coach · Lean/Six Sigma Expert</p>
